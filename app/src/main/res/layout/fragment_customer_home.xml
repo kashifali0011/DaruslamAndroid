@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:src="@drawable/ic_darussalam_logo"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/rlBasket"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_centerInParent="true"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/search_color"
+                app:cardCornerRadius="@dimen/_20sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baskat_new" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:elevation="@dimen/_1sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp">
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    android:background="@drawable/ic_home_categories_select"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="15"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/_7ssp"
+                    style="@style/NunitoSansBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+        <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvWhatWould"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/what_would_you_like_to_read"
+            app:fontFamily="@font/nunito_sans_bold"
+            style="@style/NunitoSansSamiBold"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSearch"
+            android:background="@drawable/ic_serch_bar"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvWhatWould"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36sdp">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/ic_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.dtech.darussalam.utilities.helper.TypeFaceEditText
+                android:layout_width="0dp"
+                android:hint="@string/search_title_top_ic_or_author"
+                style="@style/NunitoSansRegular"
+                android:textSize="@dimen/_14ssp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColorHint="@color/hit_text_color"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+
+                android:paddingBottom="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@null"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSlider"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            app:layout_constraintTop_toBottomOf="@+id/clSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBookCategoriesName"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/rvSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBookCategory"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/rvBookCategoriesName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvBestSeller"
+            android:layout_marginTop="@dimen/_15sdp"
+            style="@style/NunitoSansBold"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/best_seller_text_color"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="@string/best_sellers"
+            app:layout_constraintTop_toBottomOf="@+id/rvBookCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvSeeAll"
+            android:layout_marginTop="@dimen/_15sdp"
+            style="@style/NunitoSansBold"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/best_seller_text_color"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:text="@string/see_all"
+            app:layout_constraintTop_toBottomOf="@+id/rvBookCategory"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/rvBestSeller"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvBestSeller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

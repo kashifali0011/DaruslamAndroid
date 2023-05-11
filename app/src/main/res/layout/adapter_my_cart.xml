@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/ic_remove_items"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:id="@+id/clRoot"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvBook"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/ivBook"
+                    android:background="@drawable/ic_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvBookName"
+                style="@style/NunitoSansBold"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@+id/cvBook"
+                android:text="Stories of the Prophets in\nEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvPrice"
+                style="@style/NunitoSansBold"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/price_text_color"
+                app:layout_constraintTop_toTopOf="@+id/clTotalItems"
+                app:layout_constraintBottom_toBottomOf="@+id/clTotalItems"
+                app:layout_constraintStart_toEndOf="@+id/cvBook"
+                android:text="SAR 57.70"
+                android:textSize="@dimen/_11ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTotalItems"
+                android:background="@drawable/ic_item_counts"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_20sdp">
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvRemoveItem"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="@dimen/_20sdp"
+                    style="@style/NunitoSansBold"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/item_remove_color"
+                    android:text="-"
+                    android:layout_height="wrap_content"/>
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvTotalCount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    style="@style/NunitoSansBold"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/item_remove_color"
+                    android:text="02"
+                    android:layout_height="wrap_content"/>
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvAddItems"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="@dimen/_20sdp"
+                    style="@style/NunitoSansBold"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/item_remove_color"
+                    android:text="+"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:background="@drawable/ic_remove_item"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/remove_item"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

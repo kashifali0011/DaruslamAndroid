@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            app:layout_constraintBottom_toTopOf="@+id/tvEnjoyReading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_250sdp"
+            app:lottie_rawRes="@raw/tour_one"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true" />
+
+        <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvEnjoyReading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/NunitoBold"
+            app:layout_constraintBottom_toTopOf="@+id/tvToReadingBook"
+            android:gravity="center"
+            android:textSize="@dimen/_16ssp"
+
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="@string/enjoy_reading_offline"
+            />
+
+        <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+            android:id="@+id/tvToReadingBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:theme="@style/NunitoRegular"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_135sdp"
+            android:text="@string/to_reading_books_when_you_are_not_connected_to_the_internet_you_will_need_to_download_them_from_them_to_your_device"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.dtech.darussalam.utilities.enums.HomeBottomSheetEnums" />
+
+        <variable
+            name="selection"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.dtech.darussalam.utilities.helper.NonSwipeViewPager
+            android:id="@+id/vpMain"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/llBottom"
+            android:background="@color/white" />
+
+
+
+
+         <LinearLayout
+             android:orientation="horizontal"
+             android:id="@+id/llBottom"
+             android:elevation="@dimen/_10sdp"
+             android:background="@drawable/ic_white_design_no_corner"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/_50sdp">
+
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/clHome"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent">
+
+                 <ImageView
+                     android:id="@+id/ivHomeIcon"
+                     android:layout_marginTop="@dimen/_10sdp"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:src="@drawable/ic_home_icon"
+                     android:layout_width="@dimen/_16sdp"
+                     android:tint='@{(selection == HomeBottomSheetEnums.HOME.value) ?@color/home_text_color : @color/home_unselect_color}'
+                     android:layout_height="@dimen/_20sdp"/>
+
+                 <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                     android:text="@string/home"
+                     style="@style/NunitoRegularBlack"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     android:layout_marginBottom="@dimen/_10sdp"
+                     android:layout_marginTop="@dimen/_1sdp"
+                     android:textSize="@dimen/_11ssp"
+                     android:textColor='@{(selection == HomeBottomSheetEnums.HOME.value) ?@color/home_text_color : @color/home_unselect_color}'
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivHomeIcon"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/clFavourites"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent">
+
+                 <ImageView
+                     android:id="@+id/ivFavorites"
+                     android:layout_marginTop="@dimen/_10sdp"
+                     android:tint='@{(selection == HomeBottomSheetEnums.FAVORITES.value) ?@color/home_text_color : @color/home_unselect_color}'
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:src="@drawable/ic_favority_icon"
+                     android:layout_width="@dimen/_16sdp"
+                     android:layout_height="@dimen/_20sdp"/>
+
+                 <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                     android:text="@string/favourites"
+                     style="@style/NunitoRegularBlack"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     android:layout_marginBottom="@dimen/_10sdp"
+                     android:layout_marginTop="@dimen/_1sdp"
+                     android:textSize="@dimen/_11ssp"
+                     android:textColor='@{(selection == HomeBottomSheetEnums.FAVORITES.value) ?@color/home_text_color : @color/home_unselect_color}'
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivFavorites"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/clMore"
+                 android:layout_weight="1"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent">
+
+                 <ImageView
+                     android:id="@+id/ivMore"
+                     android:layout_marginTop="@dimen/_10sdp"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:tint='@{(selection == HomeBottomSheetEnums.MORE.value) ?@color/home_text_color : @color/home_unselect_color}'
+                     android:src="@drawable/ic_more_icon"
+                     android:layout_width="@dimen/_24sdp"
+                     android:layout_height="@dimen/_24sdp"/>
+
+                 <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                     android:text="@string/more"
+                     style="@style/NunitoRegularBlack"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     android:layout_marginBottom="@dimen/_10sdp"
+                     android:layout_marginTop="@dimen/_1sdp"
+                     android:textSize="@dimen/_11ssp"
+                     android:textColor='@{(selection == HomeBottomSheetEnums.MORE.value) ?@color/home_text_color : @color/home_unselect_color}'
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivMore"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

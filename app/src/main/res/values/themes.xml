@@ -1,0 +1,87 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Darussalam" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/text_color</item>
+        <item name="colorPrimaryVariant">@color/text_color</item>
+        <item name="colorOnPrimary">@color/text_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/text_color</item>
+        <item name="colorSecondaryVariant">@color/text_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme_Dialog_Loader" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme_Dialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="NunitoBold" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunito_bold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="NunitoRegular" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+
+    </style>
+
+    <style name="NunitoRegularBlack" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunito</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+
+    </style>
+
+    <style name="NunitoSansRegular" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunito_sans</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/hit_text_color</item>
+    </style>
+
+    <style name="NunitoSansSamiBold" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunito_sans_semibold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/home_unselect_color</item>
+        <item name="android:textColorHint">@color/home_unselect_color</item>
+    </style>
+
+    <style name="NunitoSansBold" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunito_sans_bold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/home_unselect_color</item>
+        <item name="android:textColorHint">@color/home_unselect_color</item>
+    </style>
+    <style name="NunitoSansExtraBold" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/nunito_sans_extrabold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/home_unselect_color</item>
+        <item name="android:textColorHint">@color/home_unselect_color</item>
+    </style>
+    <style name="BaseBottomSheetTransparentDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetTransparent</item>
+    </style>
+    <style name="BottomSheetTransparent" parent="@style/Widget.Design.BottomSheet.Modal">
+
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlBookName"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:layout_height="wrap_content">
+            <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvBookName"
+                android:padding="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Book Name"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:textSize="@dimen/_11ssp"
+                style="@style/NunitoSansBold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+</layout>

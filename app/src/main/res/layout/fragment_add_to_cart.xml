@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/clBookDetails"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHeader"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/add_to_cart_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:id="@+id/ivBack"
+                android:background="@drawable/ic_back_second"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/ic_favourity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:id="@+id/cvSelectImage"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/ivBack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_150sdp">
+                <ImageView
+                    android:background="@drawable/ic_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSelectBook"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/cvSelectImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                android:id="@+id/tvStoriesOfThe"
+                app:layout_constraintTop_toBottomOf="@+id/rvSelectBook"
+                android:layout_margin="@dimen/_10sdp"
+                android:textColor="@color/home_unselect_color"
+                style="@style/NunitoSansBold"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/stories_of_the_prophets_in_english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/llWriterName"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/tvStoriesOfThe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+
+                    android:textColor="@color/home_unselect_color"
+                    style="@style/NunitoSansBold"
+                    android:text="@string/by"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    android:textColor="@color/home_unselect_color"
+                    style="@style/NunitoSansRegular"
+                    android:textSize="@dimen/_11ssp"
+                    android:text="@string/safiur_rahman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/llWriterName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:gravity="center"
+                        style="@style/NunitoSansRegular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        android:text="@string/publisher"
+                        android:background="@drawable/bg_rating_design"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_24sdp"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        style="@style/NunitoSansBold"
+                        android:textColor="@color/home_unselect_color"
+                        android:textSize="@dimen/_11ssp"
+                        android:text="Darussalam"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_24sdp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:gravity="center"
+                        style="@style/NunitoSansRegular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        android:text="@string/ratings"
+                        android:background="@drawable/bg_rating_design"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_24sdp"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        style="@style/NunitoSansBold"
+                        android:textColor="@color/home_unselect_color"
+                        android:textSize="@dimen/_11ssp"
+                        android:text="4.5"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_24sdp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                style="@style/NunitoSansExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_the_book"
+                android:textColor="@color/home_unselect_color"
+                android:textSize="@dimen/_12ssp" />
+            <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                style="@style/NunitoSansRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipis_cing_elit_morbi_viverra_lacus_nulla_id_dignissim_odio_biben_dum_et_curabitur_condimentum_urna_ut_euismod_mollis_lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_morbi_viverra_lacus_nulla_id_dignissim_odio_biben_dum_et_curabitur_condimentum_urna_ut_euismod_mollis_ante_lacus_pretium_urna_vel_iaculis_orci_arcu_quis_purus_aenean_nibh_quam_lacinia_eget_dolor_vel_elementum_facilisis_massa_donec_id_pellentesque"
+                android:textColor="@color/home_unselect_color"
+                android:textSize="@dimen/_12ssp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLanguage"
+                android:background="@color/add_cart_color"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="@string/language"
+                    style="@style/NunitoSansExtraBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvLanguage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    style="@style/NunitoSansRegular"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="English"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clPage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="@string/pages"
+                    style="@style/NunitoSansExtraBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    android:id="@+id/tvPage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    style="@style/NunitoSansRegular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="1111+"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/showMoreAndLess"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clWeight"
+                    android:background="@color/add_cart_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/weight_kg"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvWeightKg"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="1.3343"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPublisher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/publisher"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvPublisher"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="Darussalam"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAuthor"
+                    android:background="@color/add_cart_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/author"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvAuthor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="Safiur Rahman"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBookColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/book_color"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvclBookColor"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="1 Color Book"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBookCover"
+                    android:background="@color/add_cart_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/book_cover"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvBookCover"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="Safiur Rahman"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAgeGroups"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/age_groups"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvAgeGroups"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="1 Color Book"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSizeCm"
+                    android:background="@color/add_cart_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/size_cm"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvSizeCm"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="14x21"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clISBN"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/isbn"
+                        style="@style/NunitoSansExtraBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                        android:id="@+id/tvISBN"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        style="@style/NunitoSansRegular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="9780303603603"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clReadMore"
+                android:background="@color/add_cart_color"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp">
+
+                <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/tvShowMoreOrLess"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="@string/read_more"
+                    style="@style/NunitoSansExtraBold"
+                    android:textColor="@color/best_seller_colors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.dtech.darussalam.utilities.helper.TypeFaceTextView
+                android:textColor="@color/home_unselect_color"
+                style="@style/NunitoSansBold"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/you_may_also_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBookCategory"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:background="@drawable/ic_round_croner_blue_gradiant"
+              android:layout_alignParentBottom="true"
+              android:layout_marginBottom="@dimen/_5sdp"
+              android:layout_marginEnd="@dimen/_15sdp"
+              android:layout_marginStart="@dimen/_15sdp"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_40sdp">
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+</layout>
